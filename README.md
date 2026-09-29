@@ -40,7 +40,7 @@ C:\ProgramData\CloudflareDDNS\cloudflare-ddns.ps1
 
 ### 3. 配置 Windows 计划任务
 
-以管理员身份打开 PowerShell，复制运行以下命令：
+以管理员身份打开 PowerShell，复制运行以下命令（系统级计划任务，每10分钟运行一次）：
 
 ```powershell
 schtasks --% /Create /TN "CloudflareDDNS" /TR "powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File C:\ProgramData\CloudflareDDNS\cloudflare-ddns.ps1" /SC MINUTE /MO 10 /RU "NT AUTHORITY\SYSTEM" /RL HIGHEST /F

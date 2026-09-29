@@ -1,2 +1,24 @@
 # cloudflare-ddns-windows
-windows环境下，计划任务：托管到cloudflare的ddns服务。
+# Windows Cloudflare Direct DDNS
+
+适用于 Windows 环境的无界面静默 DDNS 工具。能够自动绕过系统代理（如 Clash/v2ray 等），直接获取硬路由器拨号的真实公网 IPv4，并同步更新至 Cloudflare DNS 解析。
+
+## 项目特性
+
+- **强制直连**：彻底绕过系统代理，获取真实的拨号公网 IP。
+- **多源校验**：集成多个外网 IP 接口，自动判定与容错降级。
+- **本地缓存**：内置 `last_ip.txt` 缓存，仅在 IP 变动时调用 Cloudflare API。
+- **极简部署**：基于纯正 PowerShell 5.1 编写，无须安装额外依赖。
+
+## 使用说明
+
+### 1. 准备目录与配置
+
+在本地创建文件夹 `C:\ProgramData\CloudflareDDNS\`，并新建 `config.json` 文件：
+
+```json
+{
+  "ApiToken": "你的Cloudflare_API_Token",
+  "ZoneId": "你的Zone_ID",
+  "RecordName": "ddns.3458031.xyz"
+}

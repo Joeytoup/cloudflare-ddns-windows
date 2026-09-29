@@ -1,0 +1,5 @@
+{
+  "ApiToken": "YOUR_CLOUDFLARE_API_TOKEN",
+  "ZoneId": "YOUR_CLOUDFLARE_ZONE_ID",
+  "RecordName": "ddns.3458031.xyz"
+}

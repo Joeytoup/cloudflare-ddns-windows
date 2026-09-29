@@ -21,6 +21,7 @@ C:\ProgramData\CloudflareDDNS\
 ├── last_ip.txt           # 本地 IP 缓存文件（脚本自动生成）
 ├── ddns.log              # 运行日志（脚本自动生成）
 └── README.md             # 使用说明文档
+```
 
 ## 使用说明
 

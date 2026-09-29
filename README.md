@@ -22,3 +22,15 @@
   "ZoneId": "你的Zone_ID",
   "RecordName": "ddns.3458031.xyz"
 }
+
+
+**### 2. 保存脚本文件**
+
+将本仓库中的 cloudflare-ddns.ps1 下载并保存至 `C:\ProgramData\CloudflareDDNS\cloudflare-ddns.ps1`。
+
+**### 3. 配置 Windows 计划任务（开机自启 + 每 10 分钟循环）**
+以管理员身 打开 PowerShell，复制运行以下单行命令：
+`schtasks --% /Create /TN "CloudflareDDNS" /TR "powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File C:\ProgramData\CloudflareDDNS\cloudflare-ddns.ps1" /SC MINUTE /MO 10 /RU "NT AUTHORITY\SYSTEM" /RL HIGHEST /F`
+
+**### 4. 验证运行状态**
+可打开 C:\ProgramData\CloudflareDDNS\ddns.log 查看后台运行日志。

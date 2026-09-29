@@ -10,6 +10,18 @@
 * **本地缓存**：内置 `last_ip.txt` 缓存，仅在 IP 变动时调用 Cloudflare API。
 * **极简部署**：基于纯正 PowerShell 5.1 编写，无须安装额外依赖。
 
+## 目录结构
+
+所有核心文件统一放置在 Windows 的 `C:\ProgramData\CloudflareDDNS\` 目录下：
+
+```text
+C:\ProgramData\CloudflareDDNS\
+├── config.json           # API 密钥与域名配置文件
+├── cloudflare-ddns.ps1   # 核心执行脚本
+├── last_ip.txt           # 本地 IP 缓存文件（脚本自动生成）
+├── ddns.log              # 运行日志（脚本自动生成）
+└── README.md             # 使用说明文档
+
 ## 使用说明
 
 ### 1. 准备目录与配置

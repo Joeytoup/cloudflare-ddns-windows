@@ -26,7 +26,7 @@ C:\ProgramData\CloudflareDDNS\
 {
   "ApiToken": "你的Cloudflare_API_Token",
   "ZoneId": "你的Zone_ID",
-  "RecordName": "ddns.3458031.xyz"
+  "RecordName": "你的Domain_name"
 }
 ```
 

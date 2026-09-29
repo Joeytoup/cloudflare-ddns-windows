@@ -27,13 +27,11 @@ C:\ProgramData\CloudflareDDNS\
 
 ### 1. 准备目录与配置
 
-在本地创建文件夹：
+在本地新建：
 
 ```text
-C:\ProgramData\CloudflareDDNS\
+C:\ProgramData\CloudflareDDNS\config.json
 ```
-
-并新建 `config.json` 文件：
 
 ```json
 {

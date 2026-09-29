@@ -1,4 +1,3 @@
-# cloudflare-ddns-windows
 
 # Windows Cloudflare Direct DDNS
 
